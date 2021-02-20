@@ -1,0 +1,325 @@
+body
+{
+    font-family: sans-serif;
+    margin: 0 
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 40px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    padding: 10px 10px;
+}
+
+.login,a,.btn2,.creating
+{
+    border-radius: 50px;
+    border: none;
+    padding: 10px 10px;
+    font-weight: bold;
+    background-color: #FF3366;
+    color: white;
+    transition: all ease .3s;
+    text-decoration: none;
+}
+.posts,.title,.Login
+{
+    display: flex;
+    align-items: center;
+    transition: all ease 1s;
+}
+.title
+{
+    width: auto;
+}
+button,a
+{
+    cursor: pointer;
+}
+hr {
+    border: 0;
+    display:block;
+    width: 100%;               
+    background-color:black;
+    height: 1px;
+  }
+  
+.heading
+{   
+    letter-spacing: 10px;
+    background: -webkit-linear-gradient(#ff758c, #EA4492);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title
+{
+    margin-left: 10%;
+}
+.login:hover,a:hover,.btn:hover,.btn2:hover,.creating:hover
+{
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 2px 2px;
+}
+.login:active,a:active,.btn:active,.btn2:active,.creating:active
+{
+    transform: translateY(1px);
+}
+.title:hover
+{
+    transform: skewY(2deg);
+    cursor:grab
+}
+.search
+{
+    display: flex;
+    justify-content: center;
+}
+.search div
+{
+    width: 40%;
+}
+.search span
+{
+    margin-left: 2%;
+}
+.search input
+{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid silver;
+}
+input:focus
+{
+    outline: none;
+}
+.section
+{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.create
+{    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6px;
+}
+.button
+{  
+    width: 100%;
+    display: flex;
+    justify-items: flex-end;
+    margin-left: 6px;
+}
+.article
+{ box-shadow: 3px 3px 5px 6px #ccc;
+    height: auto;
+    width: 24%;
+    padding-bottom: 20px;
+    margin-top: 4%;
+}
+.title2
+{
+    text-align: center;
+}
+.image
+{
+    width: 100%;
+    height: 150px;
+}
+.posts
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.btns
+{   margin-top: 6%;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+.view
+{
+    border-radius: 0px;
+    border: none;
+    padding: 0;
+    font-weight: normal;
+    background-color:  white;
+    color: gray;
+    transition: none;
+    text-decoration: dashed;
+    text-decoration: underline
+
+}
+.view:hover
+{
+    color:gray;
+    transform: none;
+    box-shadow: none;
+    text-decoration: underline
+
+}
+
+.delete-tab
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0, 0.4);
+    top: 0;
+    background-repeat: no-repeat;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab 
+{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.415);
+    border-radius: 10px;
+}
+.delete-post
+{
+    font-size: 2rem;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.para
+{
+    margin-left: 6%;
+    color: #979A92;
+}
+.buttons
+{
+    margin-top:14%;
+    margin-left: 43%;
+    display: flex;
+}
+.buttons button
+{
+    border: none;
+    background-color: white;
+    color: silver;
+    font-size: 1.5rem;
+    
+}
+@media(max-width: 1296px)
+{   .article
+    {
+        width: 27%;
+    }
+}
+@media(max-width: 1059px)
+{
+    .article
+    {
+        width: 35%;
+    }
+}
+@media (max-width: 874px)
+{
+    .article
+    {
+        width: 40%;
+    }
+ .heading
+ {
+     letter-spacing: 5px;
+ }
+}
+@media (max-width: 785px)
+{
+    .article
+    {
+        width: 45%;
+    }
+ .header
+ {
+     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .search div
+    {
+        width: 80%;
+    }
+    .section
+    {
+        margin-top: 4%;
+    }
+}
+@media(max-width: 620px)
+{
+    .article
+    {
+        width: 65%;
+    }
+}
+@media(max-width: 448px)
+{
+    .article
+    {
+        width: 80%;
+    }
+    .heading
+    {
+        letter-spacing: 1px;
+    }
+}
+@media(max-width: 358px)
+{       .btns
+    {   align-items: center;
+        flex-direction: column;
+    }
+    .edit
+    {
+        margin-bottom: 25px;
+    }
+   .heading
+    {   font-size: 19px;
+        letter-spacing: 1px;
+    }
+    .search div
+    {
+        width: 90%;
+    }
+    .article
+    {
+        width: 100%;
+    }
+    .tab 
+    {
+        width: 200px;
+    }
+    .buttons
+{
+    margin-left: 6%;
+}
+}
+@media(max-width: 300px)
+{   
+ .section
+ {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .button,.create
+ {
+    margin-bottom: 2%;
+     justify-content: center;
+ }
+.create
+{
+    margin-left: 3%;
+}
+
+}

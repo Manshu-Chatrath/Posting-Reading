@@ -1,0 +1,45 @@
+
+.single_post
+{
+    box-shadow: 3px 3px 5px 6px #ccc;
+    width: 50%;
+    margin-top: 10%;
+    margin: 4% auto;
+    padding: 20px;
+}
+.img
+{
+    width: 60%;
+
+}
+.pic
+{
+    display: flex;
+    justify-content: center;
+}
+.description,.categories
+{
+    display: flex;
+    justify-items: center;
+    text-align: center;
+}
+@media (max-width: 950px)
+{   .single_post
+    {
+        width: 70%;
+    }
+    .img
+    {
+        width: 80%;
+    }
+}
+@media (max-width: 476px)
+{   .single_post
+    {
+        width: 90%;
+    }
+    .img
+    {
+        width: 80%;
+    }
+}
