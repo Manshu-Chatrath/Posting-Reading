@@ -8,43 +8,43 @@ export const signout=(id)=>{
 }
 export const create=(formvalue,userId)=>async(dispatch)=>{
 
-    const response=await axios.post('http://localhost:3001/posts',{...formvalue,userId: userId});
+    const response=await axios.post('https://postssharingapi.herokuapp.com/posts',{...formvalue,userId: userId});
  
     dispatch({type: 'CREATE_POST', payload: response.data});
     history.push('/')
 }
 export const fetchall=()=>async(dispatch)=>{
-    const response=await axios.get('http://localhost:3001/posts');
+    const response=await axios.get('https://postssharingapi.herokuapp.com/posts');
     dispatch({type: 'FETCH_POSTS', payload: response.data})
 }
 export const view=(id)=>async (dispatch)=>{
-    const response=await axios.get(`http://localhost:3001/posts/${id}`);
+    const response=await axios.get(`https://postssharingapi.herokuapp.com/posts/${id}`);
     dispatch({type: 'VIEW_POST', payload: response.data})
 }
 export const myposts=(userId)=>async (dispatch)=>{
    
-    const response=await axios.get(`http://localhost:3001/posts`);
+    const response=await axios.get(`https://postssharingapi.herokuapp.com/posts`);
     let a=response.data.filter(item=>item.userId===userId);
   
     dispatch({type: 'MY_POSTS', payload: a})
 }
 export const edit=(id,formvalue)=>async (dispatch)=>{
-    const response=await axios.patch(`http://localhost:3001/posts/${id}`,formvalue);
+    const response=await axios.patch(`https://postssharingapi.herokuapp.com/posts/${id}`,formvalue);
     dispatch({type: 'EDIT_POST',payload: response.data});
     history.push('/')
 }
 export const fetchone=(id)=>async (dispatch)=>{
-    const response=await axios.get(`http://localhost:3001/posts/${id}`);
+    const response=await axios.get(`https://postssharingapi.herokuapp.com/posts/${id}`);
  
     dispatch({type: 'FETCH_ONE', payload: response.data})
 }
 export const deleting=(id)=>async(dispatch)=>{
-    const response=await axios.delete(`http://localhost:3001/posts/${id}`);
+    const response=await axios.delete(`https://postssharingapi.herokuapp.com/posts/${id}`);
     dispatch({type: 'DELETED',payload: response.data});
     history.push('/')
 }
 export const searching=(term)=>async(dispatch)=>{
-    const response=await axios.get('http://localhost:3001/posts');
+    const response=await axios.get('https://postssharingapi.herokuapp.com/posts');
     let data=response.data;
     let realdata=[]
   let real=data.forEach(post=>{
@@ -57,7 +57,7 @@ export const searching=(term)=>async(dispatch)=>{
 }
 export const searchmyposts=(userId,term)=>async (dispatch)=>{
     console.log("There are myposts" +userId);
-    const response=await axios.get(`http://localhost:3001/posts`);
+    const response=await axios.get(`https://postssharingapi.herokuapp.com/posts`);
     let data=response.data.filter(item=>item.userId===userId);
     let realdata=[];
     let real=data.forEach(post=>{
