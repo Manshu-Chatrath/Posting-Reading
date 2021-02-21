@@ -52,3 +52,11 @@ input:focus
         width: 95%;
     }
 }
+@media(max-width: 500px)
+{
+    .form
+    {
+        width: 80%;
+    }
+}
+
